@@ -487,7 +487,7 @@ class MyOperator<T> implements UnaryOperator<String> {
             return s;
         }
 
-        return s.substring(0, 1).toUpperCase() + s.substring(1);
+        return s.substring(0, 1).toUpperCase() + s.substring(1); // (0,1) znamená že sa nahradí len 1 písmeno na 0 indexe
     }
 }
 
