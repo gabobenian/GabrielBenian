@@ -1,0 +1,57 @@
+// Trieda Kniha
+class Kniha {
+    private String nazov;
+    private String autor;
+    private String zaner;
+    private int rokVydania;
+    // Konstruktory, gettery a settery
+}
+
+// Trieda Citadel
+class Citadel {
+    private String meno;
+    private String priezvisko;
+    private String id;
+    // Konstruktory, gettery a settery
+}
+
+// Trieda Vypozicka
+class Vypozicka {
+    private Kniha kniha;
+    private Citadel citadel;
+    private LocalDate datumVypozicky;
+    private LocalDate datumVracania;
+    // Konstruktory, gettery a settery
+}
+
+// Rozhranie SpravaKnih
+interface SpravaKnih {
+    void pridajKnihu(Kniha kniha);
+    void odstranKnihu(Kniha kniha);
+    void aktualizujKnihu(Kniha kniha);
+}
+
+// Implementácia triedy pre spravovanie kníh
+class KnihaManager implements SpravaKnih {
+    private List<Kniha> knihy = new ArrayList<>();
+    
+    @Override
+    public void pridajKnihu(Kniha kniha) {
+        knihy.add(kniha);
+    }
+
+    @Override
+    public void odstranKnihu(Kniha kniha) {
+        knihy.remove(kniha);
+    }
+
+    @Override
+    public void aktualizujKnihu(Kniha kniha) {
+        // Implementácia aktualizácie knihy
+    }
+
+    public List<Kniha> vyhladajKnihy(String kriterium) {
+        // Implementácia vyhľadávania kníh
+        return null;
+    }
+}
